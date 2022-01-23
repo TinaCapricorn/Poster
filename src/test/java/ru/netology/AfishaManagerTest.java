@@ -12,33 +12,81 @@ class AfishaManagerTest {
     @Test
     void showMovies() {
         AfishaManager afishaManger = new AfishaManager(6);
-        int expected = 6;
-        int actual = afishaManger.getShowedMovies().length;
-        assertEquals(expected, actual);
+        Movie[] expected = {
+                new Movie(15, "Побег из Шоушенка", "USA"),
+                new Movie(14, "Зеленая миля", "USA"),
+                new Movie(13, "Жизнь прекрасна", "Italy"),
+                new Movie(12, "Одержимость", "USA"),
+                new Movie(11, "Терминатор 2", "USA"),
+                new Movie(10, "Темный рыцарь", "USA")
+        };
+        Movie[] actual = afishaManger.getShowedMovies();
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void showMoreMovies() {
         AfishaManager afishaManger = new AfishaManager(13);
-        int expected = 13;
-        int actual = afishaManger.getShowedMovies().length;
-        assertEquals(expected, actual);
+        Movie[] expected = {
+                new Movie(15, "Побег из Шоушенка", "USA"),
+                new Movie(14, "Зеленая миля", "USA"),
+                new Movie(13, "Жизнь прекрасна", "Italy"),
+                new Movie(12, "Одержимость", "USA"),
+                new Movie(11, "Терминатор 2", "USA"),
+                new Movie(10, "Темный рыцарь", "USA"),
+                new Movie(9, "Приключения Шерлока Холмса и доктора Ватсона", "USSR"),
+                new Movie(8, "Достучаться до небес", "Germany"),
+                new Movie(7, "Назад в будущее", "USA"),
+                new Movie(6, "Унесённые призраками", "Japan"),
+                new Movie(5, "Карты, деньги, два ствола", "UK"),
+                new Movie(4, "ВАЛЛ·И", "USA"),
+                new Movie(3, "Криминальное чтиво", "USA"),
+        };
+        Movie[] actual = afishaManger.getShowedMovies();
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void showOverMovies() {
         AfishaManager afishaManger = new AfishaManager(18);
-        int expected = 15;
-        int actual = afishaManger.getShowedMovies().length;
-        assertEquals(expected, actual);
+        Movie[] expected = {
+                new Movie(15, "Побег из Шоушенка", "USA"),
+                new Movie(14, "Зеленая миля", "USA"),
+                new Movie(13, "Жизнь прекрасна", "Italy"),
+                new Movie(12, "Одержимость", "USA"),
+                new Movie(11, "Терминатор 2", "USA"),
+                new Movie(10, "Темный рыцарь", "USA"),
+                new Movie(9, "Приключения Шерлока Холмса и доктора Ватсона", "USSR"),
+                new Movie(8, "Достучаться до небес", "Germany"),
+                new Movie(7, "Назад в будущее", "USA"),
+                new Movie(6, "Унесённые призраками", "Japan"),
+                new Movie(5, "Карты, деньги, два ствола", "UK"),
+                new Movie(4, "ВАЛЛ·И", "USA"),
+                new Movie(3, "Криминальное чтиво", "USA"),
+                new Movie(2, "Властелин колец", "USA"),
+                new Movie(1, "1+1", "France")
+        };
+        Movie[] actual = afishaManger.getShowedMovies();
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void showLessMovies() {
         AfishaManager afishaManger = new AfishaManager(-3);
-        int expected = 10;
-        int actual = afishaManger.getShowedMovies().length;
-        assertEquals(expected, actual);
+        Movie[] expected = {
+                new Movie(15, "Побег из Шоушенка", "USA"),
+                new Movie(14, "Зеленая миля", "USA"),
+                new Movie(13, "Жизнь прекрасна", "Italy"),
+                new Movie(12, "Одержимость", "USA"),
+                new Movie(11, "Терминатор 2", "USA"),
+                new Movie(10, "Темный рыцарь", "USA"),
+                new Movie(9, "Приключения Шерлока Холмса и доктора Ватсона", "USSR"),
+                new Movie(8, "Достучаться до небес", "Germany"),
+                new Movie(7, "Назад в будущее", "USA"),
+                new Movie(6, "Унесённые призраками", "Japan"),
+        };
+        Movie[] actual = afishaManger.getShowedMovies();
+        assertArrayEquals(expected, actual);
     }
 
     @Test

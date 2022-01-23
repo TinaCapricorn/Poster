@@ -19,7 +19,7 @@ public class AfishaManager {
             new Movie(12, "Одержимость", "USA"),
             new Movie(13, "Жизнь прекрасна", "Italy"),
             new Movie(14, "Зеленая миля", "USA"),
-            new Movie(15, "Побег из Шоушенка", "USA"),
+            new Movie(15, "Побег из Шоушенка", "USA")
     };
 
 
